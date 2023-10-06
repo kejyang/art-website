@@ -1,0 +1,42 @@
+.card--global {
+    width: 175px;
+    font-size: 14px;
+    flex: 0 0 auto;         /* ADD */
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
+}
+
+.my--card--title {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card--artist {
+    color: black;
+    text-decoration: none;
+}
+
+.card--image {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 9px;
+    margin-bottom: 9px;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    overflow-x: auto;
+}
+
+section {
+    margin: 0;
+    padding-top: 50px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-left: 120px;
+}
+

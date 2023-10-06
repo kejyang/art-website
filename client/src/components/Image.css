@@ -1,0 +1,35 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.drawing--container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+.image {
+    width: auto;
+    max-height: 400px;
+}
+
+.original{
+    width: auto;
+    height: auto;
+} 
+
+
+.drawing--title{
+    display:flex;
+    align-items: flex-start;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
