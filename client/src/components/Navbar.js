@@ -8,7 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton'
 import { useAuth0 } from "@auth0/auth0-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css"
 
 import { NavLink } from 'react-router-dom'
@@ -27,7 +27,7 @@ function NavBar() {
   }
 
   function handleSubmit(event){
-    event.preventDefault();
+    //event.preventDefault();
     console.log(searchParams)
     let path = `SearchPage/${searchParams}`; 
     navigate(path);

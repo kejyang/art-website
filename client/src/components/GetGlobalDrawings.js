@@ -29,17 +29,21 @@ const GetGlobalDrawings = () =>  {
 
   
     return (
-        <section className="cards-list">
-            {tempArr.map((x) => (
-                <Card 
-                    key = {x.id}
-                    id = {x.id}
-                    picture = {x.picture}
-                    title = {x.title}
-                    artist = {x.artist}
-                />
-            ))}
-        </section>
+        <div>
+          <p className="works-class">Works</p>
+          <section className="cards-list">
+              {tempArr.map((x) => (
+                  <Card 
+                      key = {x.id}
+                      id = {x.id}
+                      picture = {x.picture}
+                      title = {x.title}
+                      artist = {x.artist}
+                      description = {x.description}
+                  />
+              ))}
+          </section>
+        </div>
     );
   
 }

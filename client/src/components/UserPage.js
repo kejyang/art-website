@@ -36,6 +36,7 @@ const UserPage = () =>  {
         isAuthenticated && (
           <div>
             {user.email}
+            <p className="works-class">Your Works</p>
               <section className="cards-list">
                   {tempArr.map((x) => (
                       <Card 

@@ -37,6 +37,7 @@ const OtherUsersPage = () =>  {
   
     return (
         <div>
+            <p className="works-class">{artist}'s Works</p>
               <section className="cards-list">
                   {tempArr.map((x) => (
                       <Card 

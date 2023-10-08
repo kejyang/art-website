@@ -1,0 +1,10 @@
+.AddDrawing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-upload-form{
+    align-items:center;
+    justify-content: center;
+}

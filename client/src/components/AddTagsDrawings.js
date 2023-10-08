@@ -3,7 +3,9 @@ import axios from "axios";
 import firebase from "../firebaseConfig";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import './AddDrawing.css'
 const AddTagsDrawings = () =>{
 
   const [file, setFile] = useState()
@@ -108,11 +110,11 @@ const AddTagsDrawings = () =>{
   return (
     <div className="AddDrawing">
         <form method="post" onSubmit={handleSubmit}>
-          <h1>React File Upload</h1>
+          <h5>Upload your file</h5>
           <input type="file" name="drawing"  onChange={handleFileChange}/>
           <input name="title" placeholder="Title" onChange={handleTitleChange}  />
           <input name="description" placeholder="Description" onChange={handleDescriptionChange} />
-          <h1>React Tag Upload</h1>
+          <h5>Upload what tags fits the drawing</h5>
             <input name="tag" placeholder="type tag here" onChange={handleTagChange}/>
               <button  onClick={handleTagSubmit}>Add Tag</button>
           <button type="submit">Upload</button>

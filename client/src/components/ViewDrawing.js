@@ -6,7 +6,7 @@ export default function ViewDrawing(){
 
     const [clicked, setClicked] = useState(false);
     const location = useLocation();
-    const { picture , title} = location.state
+    const { picture , title, description} = location.state
 
     function handleOnClick(){
       setClicked(prevState=>!prevState);
@@ -17,6 +17,7 @@ export default function ViewDrawing(){
         <div className = "drawing--container">
           <img src={picture} alt="View Drawing" className = {`${clicked ? "original":"image"}`} onClick={handleOnClick}/> 
           <div className="drawing--title">{title}</div>
+          <div>{description}</div>
         </div>
         
     )
