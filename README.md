@@ -23,4 +23,8 @@ __Search__
 You can search for specific images using the search bar. The search algorithm checks for both the title of the image and the tags the uploader has added to it.
 
 __User Dashboard__ 
+
+![image](https://github.com/kejyang/art-website/assets/38774593/19795c78-d768-45ef-bd80-3ffbb2cd36de)
+
+
 On this page it will display all of the drawings that you have uploaded along with the ability to add more drawings.
