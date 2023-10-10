@@ -35,7 +35,7 @@ const UserPage = () =>  {
     return (
         isAuthenticated && (
           <div>
-            {user.email}
+            <Link to="/AddTagsDrawings" className="btn btn-primary upload-drawing">Add A Drawing</Link>
             <p className="works-class">Your Works</p>
               <section className="cards-list">
                   {tempArr.map((x) => (
@@ -47,7 +47,6 @@ const UserPage = () =>  {
                       />
                   ))}
               </section>
-              <Link to="/AddTagsDrawings" className="btn btn-primary">Add Drawing</Link>
           </div>
         )
     );

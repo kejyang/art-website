@@ -14,12 +14,6 @@ local:
 #  region: us-east-1
 #  bucket: your_own_bucket-<%= Rails.env %>
 
-amazon:
-  service: S3
-  access_key_id: AKIA3JYTS7QKVJHHTQFV
-  secret_access_key: y6a9e1arMz2HHPVj79NAewX8Vo1iE4gK/ov8++3+
-  region: us-west-1
-  bucket: art-website-bucket
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
