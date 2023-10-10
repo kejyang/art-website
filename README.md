@@ -1,24 +1,7 @@
-# README
+<h2>Introduction</h2>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This website lets users host their drawings online. When the user opens up the website they are shown all the works that
+the users of the website have uploaded. The user can click on these images to go to their respective image page or click on the username underneath 
+to go to the specified user's page. The user can also search for images or other users using the search function. In order to upload images the user must
+sign in. When signed in they can access their own user page which will allow them to upload images, edit the title/description of their current images or
+delete images.
