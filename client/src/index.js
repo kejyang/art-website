@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Auth0Provider
+{/*     <Auth0Provider
       domain="dev-7lul6xrih3fszlxk.us.auth0.com"
       clientId="tzYGUxvKaQiXHNeS5doWM1vJEEL0VBNp"
       authorizationParams={{
@@ -17,9 +17,9 @@ root.render(
       }}
       useRefreshTokens
       cacheLocation="localstorage"
-    >
+    > */}
     <App />
-    </Auth0Provider>
+{/*     </Auth0Provider> */}
   </React.StrictMode>
 );
 
