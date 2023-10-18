@@ -22,7 +22,7 @@ function App() {
   return (
  
       <Router>
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route path='/' element={<GetGlobalDrawings />} /> 
           <Route path='/SearchPage/:searchParams' element={<SearchPage />} /> 
