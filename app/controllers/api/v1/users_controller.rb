@@ -28,7 +28,7 @@ module Api::V1
       @user = User.find_or_create_by(artist: user_params[:artist])
         
       if @user.save
-        render json: @user, status: :created, location: @user
+        render json: @user, status: :created, location: api_v1_user_url(@user)
       else
         render json: @user.errors, status: :unprocessable_entity
       end

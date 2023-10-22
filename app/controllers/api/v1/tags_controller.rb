@@ -32,7 +32,7 @@ module Api::V1
       @tag = Tag.find_or_create_by(tag: tag_params[:tag])
       
       if @tag.save
-        render json: @tag, status: :created, location: @tag
+        render json: @tag, status: :created, location: api_v1_tag_url(@tag)
       else
         render json: @tag.errors, status: :unprocessable_entity
       end
