@@ -21,7 +21,7 @@ const AddTag = () =>{
         event.preventDefault();
         for(let i = 0; i < tags.length; i++){
             axios
-            .post("/api/v1/tags", {tag:{
+            .post("http://localhost:3001/api/v1/tags", {tag:{
                 tag: tags[i],
                 picture: "testpicture"
               }

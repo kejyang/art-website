@@ -78,7 +78,7 @@ const AddDrawing = () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           console.log('File available at', downloadURL);
           axios
-          .post("/api/v1/drawings", {drawing:{
+          .post("http://localhost:3001/api/v1/drawings", {drawing:{
               picture: downloadURL,
               title: title,
               description: description,

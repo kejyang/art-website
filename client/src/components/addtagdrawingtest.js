@@ -7,7 +7,7 @@ const addtagdrawingtest = () =>{
     function handleSubmit(event){
         event.preventDefault();
         axios
-        .post("/api/v1/tag_drawings", {tag_drawing:{
+        .post("http://localhost:3001/api/v1/tag_drawings", {tag_drawing:{
             tag_id: 3,
             drawing_id: 9,
             title: "test"

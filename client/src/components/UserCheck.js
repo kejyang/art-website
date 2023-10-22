@@ -12,7 +12,7 @@ const UserCheck = () => {
   useEffect(()=>{
     if (isAuthenticated){
       axios
-        .post("api/v1/users", { user: { artist:"test@gmail.com", profile_pic:"", description:"" } })
+        .post("http://localhost:3001/api/v1/users", { user: { artist:"test@gmail.com", profile_pic:"", description:"" } })
         .then((response) => {
           console.log(response);
         })

@@ -2,13 +2,14 @@ import React, { Component, useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card";
 import "./Card.css"
-import { withAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 const GetGlobalDrawings = () =>  {
 
 
     const [tempArr, setTempArr] = useState([]);
+    const { user, isAuthenticated} = useAuth0();
 
     /* const queryParams = {
         artist: "test",
@@ -18,13 +19,23 @@ const GetGlobalDrawings = () =>  {
     
     useEffect(() => {
         axios
-        .get(`/api/v1/drawings/`)
+        .get(`http://localhost:3001/api/v1/drawings/`)
         .then((response) => {
             console.log(response);
             setTempArr(response.data);
         })
       .catch((error) => console.log(error));
-    }, []);
+      if(isAuthenticated){
+        axios
+        .post("http://localhost:3001/api/v1/users", { user: { artist:user.email, profile_pic:"", description:"" } })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      }
+    }, [isAuthenticated]);
 
 
   
@@ -41,7 +52,7 @@ const GetGlobalDrawings = () =>  {
                       artist = {x.artist}
                       description = {x.description}
                   />
-              ))}
+              ))}  
           </section>
         </div>
     );

@@ -20,7 +20,7 @@ const AddUser = () =>  {
 
     useEffect(() => {    
        axios
-      .get(`/api/v1/users/?${params}`)
+      .get(`http://localhost:3001/api/v1/users/?${params}`)
       .then((response) => {
         console.log(response);
       })

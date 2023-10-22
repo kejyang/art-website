@@ -24,7 +24,7 @@ const OtherUsersPage = () =>  {
     useEffect(() => {
 
           axios
-          .get(`/api/v1/drawings/?artist=${artist}`)
+          .get(`http://localhost:3001/api/v1/drawings/?artist=${artist}`)
           .then((response) => {
               console.log(response);
               setTempArr(response.data);

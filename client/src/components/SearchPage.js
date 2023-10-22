@@ -46,7 +46,7 @@ const SearchPage = () =>  {
 
     async function titleGet(){
       const response = await axios
-      .get(`/api/v1/drawings/?title=${searchParams}`)
+      .get(`http://localhost:3001/api/v1/drawings/?title=${searchParams}`)
       .catch((error) => console.log(error));
       return response.data;
     }
@@ -61,21 +61,21 @@ const SearchPage = () =>  {
       }  */
       async function tagGetId () {
         const response = await axios
-        .get(`/api/v1/tags/?tag=${searchParams}`)
+        .get(`http://localhost:3001/api/v1/tags/?tag=${searchParams}`)
         .catch((error) => console.log(error)); 
         return response.data;
       } 
 
     async function tagDrawingGet (id) {
         const response = await axios
-        .get(`/api/v1/tag_drawings/?tag_id=${id}`)
+        .get(`http://localhost:3001/api/v1/tag_drawings/?tag_id=${id}`)
         .catch((error) => console.log(error)); 
         return response.data[0].drawing_id;
     }   
 
     async function drawingGet (id) {
         const response = await axios
-        .get(`/api/v1/drawings/${id}`)
+        .get(`http://localhost:3001/api/v1/drawings/${id}`)
         .catch((error) => console.log(error)); 
         let result = [response.data];
         return result;

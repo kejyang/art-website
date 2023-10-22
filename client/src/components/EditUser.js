@@ -19,7 +19,7 @@ const EditUser = () =>  {
         e.preventDefault();
     
         axios
-        .put("/api/v1/users/1", {
+        .put("http://localhost:3001/api/v1/users/1", {
           user: {
             artist: "k.yang256@gmail.com",
             profile_pic: "",

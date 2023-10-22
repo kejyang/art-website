@@ -20,11 +20,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
+
  
-      {/* <Router>
+      <Router>
         <NavBar /> 
-        <Routes>
-          <Route path='/' element={<GetGlobalDrawings />} /> 
+         <Routes>
+          <Route path='/' element={<GetGlobalDrawings />} />  
           <Route path='/SearchPage/:searchParams' element={<SearchPage />} /> 
           <Route path='/ViewDrawing/:id' element={<ViewDrawing />} />
           <Route path='/UserPage' element={<UserPage />} />
@@ -34,9 +35,9 @@ function App() {
           <Route path='/AddDrawing' element={<AddDrawing />} />
           <Route path='/AddTagDrawing' element={<AddTagDrawing />} />
           <Route path='/AddTagDrawingtest' element={<AddTagDrawingTest />} />
-          <Route path='/AddTagsDrawings' element={<AddTagsDrawings />} />
-        </Routes>
-      </Router> */}
+          <Route path='/AddTagsDrawings' element={<AddTagsDrawings />} /> 
+        </Routes>  
+      </Router> 
 
   );
 }

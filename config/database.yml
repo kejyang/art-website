@@ -81,8 +81,14 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+#production:
+#  <<: *default
+#  database: art_website_production
+ # username: art_website
+#  password: <%= ENV["ART_WEBSITE_DATABASE_PASSWORD"] %>
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: art_website_production
-  username: art_website
-  password: <%= ENV["ART_WEBSITE_DATABASE_PASSWORD"] %>
+  username: book_admin
+  password: testpassword

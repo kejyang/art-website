@@ -49,7 +49,7 @@ const AddTagsDrawings = () =>{
 
   async function uploadDrawing(fileUrl) {
     const response = await axios
-    .post("/api/v1/drawings", {drawing:{
+    .post("http://localhost:3001/api/v1/drawings", {drawing:{
       picture: fileUrl,
       title: title,
       description: description,
@@ -66,7 +66,7 @@ const AddTagsDrawings = () =>{
     let responseArr = [];
     for(let i = 0; i < tags.length; i++){
       const response = await axios
-      .post("/api/v1/tags", {tag:{
+      .post("http://localhost:3001/api/v1/tags", {tag:{
           tag: tags[i],
           picture: fileUrl
         }
@@ -80,7 +80,7 @@ const AddTagsDrawings = () =>{
 
   async function uploadTagDrawing(tag_id, drawing_id){
     axios
-    .post("/api/v1/tag_drawings", {tag_drawing:{
+    .post("http://localhost:3001/api/v1/tag_drawings", {tag_drawing:{
           tag_id: tag_id,
           drawing_id: drawing_id,
           title: title
