@@ -25,16 +25,16 @@ const GetGlobalDrawings = () =>  {
             setTempArr(response.data);
         })
       .catch((error) => console.log(error));
-      /* if(isAuthenticated){
+      if(isAuthenticated){
         axios
-        .post("http://localhost:3001/api/v1/users", { user: { artist:user.email, profile_pic:"", description:"" } })
+        .post("https://art-website.onrender.com/api/v1/users", { user: { artist:user.email, profile_pic:"", description:"" } })
         .then((response) => {
           console.log(response);
         })
         .catch((error) => {
           console.log(error);
         });
-      } */
+      } 
     }, [isAuthenticated]);
 
 

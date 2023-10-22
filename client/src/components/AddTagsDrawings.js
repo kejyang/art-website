@@ -50,7 +50,8 @@ const AddTagsDrawings = () =>{
     return fileUrl; 
   }
 
-  async function uploadDrawing(fileUrl) {
+  async function uploadDrawing(fileUrl){
+    console.log("in uploaddrawing " + fileUrl);
     const response = await axios
     .post(`${prod_link}/api/v1/drawings`, {drawing:{
       picture: fileUrl,
@@ -61,8 +62,6 @@ const AddTagsDrawings = () =>{
       }
     })
     .catch((error) => console.log(error)); 
-    console.log(response);
-    console.log(response.data);
     return response.data;
   } 
 
@@ -106,8 +105,9 @@ const AddTagsDrawings = () =>{
       uploadTag(fileUrl)
     ]);  
     for(let i = 0; i < tagUploadResArr.length; i++){
+      console.log("in for loop")
       uploadTagDrawing(tagUploadResArr[i].id, drawingUploadRes.id); 
-    }
+    } 
     
   }
 
