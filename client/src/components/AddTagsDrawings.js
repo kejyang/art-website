@@ -8,6 +8,9 @@ import Button from 'react-bootstrap/Button';
 import './AddDrawing.css'
 const AddTagsDrawings = () =>{
 
+  const dev_link = "http://localhost:3001"
+  const prod_link = "https://art-website.onrender.com"
+
   const [file, setFile] = useState()
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
@@ -49,7 +52,7 @@ const AddTagsDrawings = () =>{
 
   async function uploadDrawing(fileUrl) {
     const response = await axios
-    .post("http://localhost:3001/api/v1/drawings", {drawing:{
+    .post(`${prod_link}/api/v1/drawings`, {drawing:{
       picture: fileUrl,
       title: title,
       description: description,
@@ -58,7 +61,8 @@ const AddTagsDrawings = () =>{
       }
     })
     .catch((error) => console.log(error)); 
-
+    console.log(response);
+    console.log(response.data);
     return response.data;
   } 
 
@@ -66,7 +70,7 @@ const AddTagsDrawings = () =>{
     let responseArr = [];
     for(let i = 0; i < tags.length; i++){
       const response = await axios
-      .post("http://localhost:3001/api/v1/tags", {tag:{
+      .post(`${prod_link}/api/v1/tags`, {tag:{
           tag: tags[i],
           picture: fileUrl
         }
@@ -80,7 +84,7 @@ const AddTagsDrawings = () =>{
 
   async function uploadTagDrawing(tag_id, drawing_id){
     axios
-    .post("http://localhost:3001/api/v1/tag_drawings", {tag_drawing:{
+    .post(`${prod_link}/api/v1/tag_drawings`, {tag_drawing:{
           tag_id: tag_id,
           drawing_id: drawing_id,
           title: title

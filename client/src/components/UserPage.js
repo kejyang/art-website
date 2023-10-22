@@ -21,7 +21,7 @@ const UserPage = () =>  {
     useEffect(() => {
       if(isAuthenticated){
           axios
-          .get(`http://localhost:3001/api/v1/drawings/?artist=${user.email}`)
+          .get(`https://art-website.onrender.com/api/v1/drawings/?artist=${user.email}`)
           .then((response) => {
               console.log(response);
               setTempArr(response.data);

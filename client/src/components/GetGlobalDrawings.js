@@ -21,7 +21,7 @@ const GetGlobalDrawings = () =>  {
         axios
         .get(`https://art-website.onrender.com/api/v1/drawings/`)
         .then((response) => {
-            console.log(response);
+            console.log(response.data);
             setTempArr(response.data);
         })
       .catch((error) => console.log(error));

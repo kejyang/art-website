@@ -28,7 +28,8 @@ module Api::V1
       @drawing = Drawing.new(drawing_params)
 
       if @drawing.save
-        render json: @drawing, status: :created, location: api_v1_drawing_url(@drawing)
+        #render json: @drawing, status: :created, location: api_v1_drawing_url(@drawing)
+        render json: @drawing, status: :created, location: @drawing
       else
         render json: @drawing.errors, status: :unprocessable_entity
       end
