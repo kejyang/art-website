@@ -121,13 +121,13 @@ const AddTagsDrawings = () =>{
           <h5>Upload what tags fits the drawing</h5>
             <input name="tag" placeholder="type tag here" onChange={handleTagChange}/>
               <button  onClick={handleTagSubmit}>Add Tag</button>
+            <div className="tags-list">
+              {tags.map((x)=>(
+                <li key={x}>{x}</li>
+              ))}
+            </div>
           <button type="submit">Upload</button>
         </form>
-        <div>
-          {tags.map((x)=>(
-            <li key={x}>{x}</li>
-          ))}
-        </div>
     </div>
   );
 } 

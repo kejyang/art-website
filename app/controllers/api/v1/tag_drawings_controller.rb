@@ -4,7 +4,7 @@ module Api::V1
 
     # GET /tag_drawings
     def index
-      if params[:tag]
+      if params[:tag_id]
         @tag_drawings = TagDrawing.where(tag_id: params[:tag_id])
       else
         @tag_drawings = TagDrawing.all
